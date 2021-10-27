@@ -1,9 +1,9 @@
 import React from 'react'
-
-function ItemListContainer({greeting}) {
+import ItemList from './ItemList'
+function ItemListContainer() {
     return (
-        <div>
-            <h2>{greeting}</h2>
+        <div className='contenedorLista'>
+        <ItemList />
         </div>
     )
 }

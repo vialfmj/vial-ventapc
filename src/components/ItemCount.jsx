@@ -5,8 +5,7 @@ import { Alert } from 'react-bootstrap'
 
 
 function ItemCount(props) {
-
-    const [count, setCount]=useState(1);//al reemplazar '1' por la variable 'initial' la funcion agregar() suma +10 en vez de +1.Consultar
+    const [count, setCount]=useState(props.initial);//al reemplazar '1' por la variable 'initial' la funcion agregar() suma +10 en vez de +1.Consultar
     const agregar = () =>{
         if(count < props.stock)
         setCount(count+1);
