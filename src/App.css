@@ -27,10 +27,11 @@
   height: 50px;
 }
 .cartaProducto{
-  width: 20%;
+  width: 30%;
   height: auto;
 }
 .contenedorLista{
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
 }

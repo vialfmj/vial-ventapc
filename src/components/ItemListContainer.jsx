@@ -3,7 +3,7 @@ import ItemList from './ItemList'
 function ItemListContainer() {
     return (
         <div className='contenedorLista'>
-        <ItemList />
+        <ItemList buscar='ASUS' />
         </div>
     )
 }

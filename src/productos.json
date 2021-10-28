@@ -1,0 +1,72 @@
+[
+    {
+        "producto":"motherboard",
+        "marca": "ASUS",
+        "modelo": "X570",
+        "precio": "$1000",
+        "imagenUrl": ""
+    },
+    {
+        "producto":"motherboard",
+        "marca": "ASUS",
+        "modelo": "B450",
+        "precio": "$1000",
+        "imagenUrl": ""
+    },
+    {
+        "producto":"motherboard",
+        "marca": "ASUS",
+        "modelo": "A520",
+        "precio": "$1000",
+        "imagenUrl": ""
+    },
+    {
+        "producto":"motherboard",
+        "marca": "Gigabtyte",
+        "modelo": "X570",
+        "precio": "$1000",
+        "imagenUrl": ""
+    },
+    {
+        "producto":"motherboard",
+        "marca": "Gigabyte",
+        "modelo": "B450",
+        "precio": "$1000",
+        "imagenUrl": ""
+    },
+    {
+        "producto":"motherboard",
+        "marca": "Gigabyte",
+        "modelo": "A520",
+        "precio": "$1000",
+        "imagenUrl": ""
+    },
+    {
+        "producto":"procesador",
+        "marca": "AMD",
+        "modelo": "Ryzen 3",
+        "precio": "$1000",
+        "imagenUrl": ""
+    },
+    {
+        "producto":"prcesador",
+        "marca": "AMD",
+        "modelo": "Ryzen 5",
+        "precio": "$1000",
+        "imagenUrl": ""
+    },
+    {
+        "producto":"procesador",
+        "marca": "Intel",
+        "modelo": "I3",
+        "precio": "$1000",
+        "imagenUrl": ""
+    },
+    {
+        "producto":"procesador",
+        "marca": "Intel",
+        "modelo": "I5",
+        "precio": "$1000",
+        "imagenUrl": ""
+    }
+]
