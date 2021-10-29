@@ -4,15 +4,15 @@ import Logo from '../images/logo.jpg'
 
 function Item(props) {
     const [productos, setProductos]= useState([])
+    console.log(productos)
     useEffect(() => {
         setProductos(props.arreglo)
-    },[])
+    },[]);
 
     return (
         <>
-        
         {
-             productos[0].map((productos , index) => <div key={index} className='cartaProducto'>                
+             productos.map((productos , index) => <div key={index} className='cartaProducto'>                
             <Container >
                 <Row>
                     <img className='imagenProducto' src={Logo} alt="Imagen del producto" />
@@ -36,7 +36,7 @@ function Item(props) {
                 
             </Container>
             </div>) }
-        </>
+            </>
     )
 }
 

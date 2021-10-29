@@ -6,7 +6,7 @@ import { getProducts } from './GetProducts'
 function ItemList(props) {
 
     const [products,setProducts]= useState([])
-
+    console.log(products)
     useEffect(() => {
         getProducts
         .then(res=>{
@@ -22,7 +22,7 @@ function ItemList(props) {
     },[])
     return (
         <div className='contenedorLista'>
-            <Item arreglo={[products]}/>
+            <Item arreglo={products}/>
         </div>
     )
 }
