@@ -1,8 +1,7 @@
-import React from 'react'
+import {useState, useEffect} from 'react'
 import ItemList from './ItemList'
 import ItemCount from './ItemCount'
-
-
+import { getProducts } from './GetProducts'
 function ItemListContainer() {
     const agregarAlCarrito=(count)=>{
         if(count > 0)
@@ -10,12 +9,20 @@ function ItemListContainer() {
         else
         alert('no hay nada que agregar')
     }
-
-
+    const [productos,setProductos]= useState([])
+    useEffect(() => {
+        getProducts
+        .then((products)=>{
+            setProductos(products)
+        })
+    }, [])
     return (
-        <div className='contenedorLista'>
+        <>
+        <ItemList products={productos}/>
         <ItemCount initial={1} stock='5' onAdd={agregarAlCarrito} />
-        </div>
+
+
+        </>
     )
 }
 

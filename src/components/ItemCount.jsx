@@ -17,9 +17,6 @@ function ItemCount(props) {
      return (
         <>
         <div className='container'>
-            <div className="row">
-                <div><h1>mother intel</h1></div>
-            </div>
         <div className="row">
             <div className='col-sm-4'><button onClick={quitar} className='btn btn-primary'>decrementar</button></div>
             <div className='col-sm-4'><Alert variant='danger'><p>cantidad:{count}</p></Alert></div>

@@ -1,30 +1,14 @@
 import Item from './Item'
-import { useState, useEffect } from 'react'
-import { getProducts } from './GetProducts'
 
 
-function ItemList(props) {
-
-    const [products,setProducts]= useState([])
-    console.log(products)
-    useEffect(() => {
-        getProducts
-        .then(res=>{
-            const buscar= props.buscar
-            const resultadoBusqueda= res.filter((producto)=>{
-                return producto.marca===buscar
-            })
-            return resultadoBusqueda
-        })
-        .then(resp=> {
-            setProducts(resp)
-        })
-    },[])
-    return (
+function ItemList({products}) {
+return(
+    <>
         <div className='contenedorLista'>
-            <Item arreglo={products}/>
+            {products.map(prod=><Item key={prod.id} prod={prod}/>)}
         </div>
-    )
+    </>
+)
 }
 
 export default ItemList

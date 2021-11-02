@@ -1,4 +1,3 @@
-
 const productos= [
     {
         "id": "1",
@@ -87,4 +86,3 @@ export const getProducts= new Promise((resolve, reject)=>{
     resolve(productos)
    },2000)
 })
-
