@@ -1,25 +1,15 @@
 import {useState, useEffect} from 'react' 
+import { useParams } from 'react-router'
+import { getProducts } from './GetProducts'
 import ItemDetail from './ItemDetail'
  function ItemDetailContainer() {
     const [item,setItem]=useState()
-    const getItem= new Promise((resolve, reject)=>{
-      const itemDetail ={
-         "id": "1",
-         "producto":"motherboard",
-         "marca": "ASUS",
-         "modelo": "X570",
-         "precio": "$1000",
-         "descripcion": "Motherboard de la marca ASUS. Este modelo cuenta con caracteristicas optimas para un alto rendimiento",
-         "imagenUrl": ""
-   }
-        setTimeout(()=>{
-         resolve(itemDetail)
-        },2000)
-     })
-     useEffect(() => {
-        getItem
-        .then((itemDetail)=> setItem(itemDetail))
-         }, [])
+    const {itemId}=useParams()
+    useEffect(()=>{
+       getProducts
+         .then(res=>{
+            setItem(res.find(prod=>prod.id==itemId))})
+      },[itemId])
      return (
          <div>
             <ItemDetail item={item}/>

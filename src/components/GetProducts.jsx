@@ -1,83 +1,101 @@
 const productos= [
     {
         "id": "1",
-        "producto":"motherboard",
+        "categoria":"motherboard",
         "marca": "ASUS",
         "modelo": "X570",
         "precio": "$1000",
-        "imagenUrl": ""
+        "imagenUrl": "",
+        "descripcion":"insert descrption"
     },
     {
         "id": "2",
-        "producto":"motherboard",
+        "categoria":"motherboard",
         "marca": "ASUS",
         "modelo": "B450",
         "precio": "$1000",
-        "imagenUrl": ""
+        "imagenUrl": "",
+        "descripcion":"insert descrption"
+
     },
     {
         "id": "3",
-        "producto":"motherboard",
+        "categoria":"motherboard",
         "marca": "ASUS",
         "modelo": "A520",
         "precio": "$1000",
-        "imagenUrl": ""
+        "imagenUrl": "",
+        "descripcion":"insert descrption"
     },
     {
         "id": "4",
-        "producto":"motherboard",
+        "categoria":"motherboard",
         "marca": "Gigabtyte",
         "modelo": "X570",
         "precio": "$1000",
-        "imagenUrl": ""
+        "imagenUrl": "",
+        "descripcion":"insert descrption"
+
     },
     {
         "id": "5",
-        "producto":"motherboard",
+        "categoria":"motherboard",
         "marca": "Gigabyte",
         "modelo": "B450",
         "precio": "$1000",
-        "imagenUrl": ""
+        "imagenUrl": "",
+        "descripcion":"insert descrption"
+
     },
     {
         "id": "6",
-        "producto":"motherboard",
+        "categoria":"motherboard",
         "marca": "Gigabyte",
         "modelo": "A520",
         "precio": "$1000",
-        "imagenUrl": ""
+        "imagenUrl": "",
+        "descripcion":"insert descrption"
+
     },
     {
         "id": "7",
-        "producto":"procesador",
+        "categoria":"procesador",
         "marca": "AMD",
         "modelo": "Ryzen 3",
         "precio": "$1000",
-        "imagenUrl": ""
+        "imagenUrl": "",
+        "descripcion":"insert descrption"
+
     },
     {
         "id": "8",
-        "producto":"prcesador",
+        "categoria":"prcesador",
         "marca": "AMD",
         "modelo": "Ryzen 5",
         "precio": "$1000",
-        "imagenUrl": ""
+        "imagenUrl": "",
+        "descripcion":"insert descrption"
+
     },
     {
         "id": "9",
-        "producto":"procesador",
+        "categoria":"procesador",
         "marca": "Intel",
         "modelo": "I3",
         "precio": "$1000",
-        "imagenUrl": ""
+        "imagenUrl": "",
+        "descripcion":"insert descrption"
+
     },
     {
         "id": "10",
-        "producto":"procesador",
+        "categoria":"procesador",
         "marca": "Intel",
         "modelo": "I5",
         "precio": "$1000",
-        "imagenUrl": ""
+        "imagenUrl": "",
+        "descripcion":"insert descrption"
+
     }
 ]
 

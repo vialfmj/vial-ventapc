@@ -1,28 +1,39 @@
 import {useState, useEffect} from 'react'
 import ItemList from './ItemList'
-import ItemCount from './ItemCount'
 import { getProducts } from './GetProducts'
+import { useParams } from 'react-router'
+import {Link} from 'react-router-dom'
+import {Button} from 'react-bootstrap'
 function ItemListContainer() {
-    const agregarAlCarrito=(count)=>{
-        if(count > 0)
-        alert('se agregaron: ' + count + ' productos')
-        else
-        alert('no hay nada que agregar')
-    }
     const [productos,setProductos]= useState([])
+    const {categoriaId}=useParams()
     useEffect(() => {
-        getProducts
-        .then((products)=>{
-            setProductos(products)
-        })
-    }, [])
-    return (
-        <>
-        <ItemList products={productos}/>
-        <ItemCount initial={1} stock='5' onAdd={agregarAlCarrito} />
-
-
-        </>
+        if (categoriaId) {
+            getProducts
+            .then((res)=>{
+                setProductos(res.filter(prod=>prod.categoria===categoriaId))
+            })
+        }
+        else{
+            getProducts
+            .then((res)=>{
+                setProductos(res)
+            })
+        }
+    }, [categoriaId])
+    if(productos==null)
+        return <h1>Loading</h1>
+    else
+        return (
+            <>
+                <Link to={`/motherboard`}>
+                    <Button variant='primary'>Ver motherboards</Button>
+                </Link>
+                <Link to={`/procesador`}>
+                    <Button variant='primary'>Ver procesadores</Button>
+                </Link>
+                <ItemList products={productos}/>
+            </>
     )
 }
 

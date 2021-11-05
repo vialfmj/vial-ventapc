@@ -19,7 +19,7 @@ function ItemCount(props) {
         <div className='container'>
         <div className="row">
             <div className='col-sm-4'><button onClick={quitar} className='btn btn-primary'>decrementar</button></div>
-            <div className='col-sm-4'><Alert variant='danger'><p>cantidad:{count}</p></Alert></div>
+            <div className='col-sm-4'><Alert variant='primary'><p>cantidad:{count}</p></Alert></div>
             <div  className ='col-sm-4'><button onClick={agregar} className='btn btn-primary'>incrementar</button></div>
         </div>
         <div className="row">

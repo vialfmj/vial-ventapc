@@ -1,20 +1,41 @@
-import logo from '../images/logo.png';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import {Nav} from 'react-bootstrap' 
-import CartWidget from './CartWidget';
+import Logo from '../images/logo.png';
+import Carrito from '../images/carrito.png'
+import {Nav, Button} from 'react-bootstrap' 
+import {Link} from 'react-router-dom';
+import App from '../App';
 
 const Navbar = () =>{
 
         return(
-            <div className='navBar'>
-            <img src={logo} alt='imagen del logo de la empresa' className='App-logo' />
-            <div className='navBarContenedorItms'>
-               <Nav.Link href="#home">Inicio</Nav.Link>
-               <Nav.Link href="#products">Productos</Nav.Link>
-               <Nav.Link href="#contact">Contacto</Nav.Link>
-               </div>
-               <CartWidget />
-            </div>
+            <>
+
+            <Nav>
+                <div className="navBar">
+                    <div className='logo'>
+                        <Link to='/' element={<App/>}>
+                            <img src={Logo} alt="imagen del logo de la empresa" />
+                        </Link>
+                    </div>
+                    <div>
+                        <Link to='/Contacto'>
+                            <Button variant='primary'>Contacto</Button>
+                        </Link>
+                        <Link to='/Galeria'>
+                            <Button variant='primary'>Galeria</Button>
+                        </Link>
+                        <Link to='/Nosotros'>
+                            <Button variant='primary'>Nosotros</Button>
+                        </Link>
+                    </div>
+                </div>
+                <div className='contenedorCarrito'>
+                    <Link to='/Cart'>
+                        <img src={Carrito} alt="imagen del acceso al carrito de compras" />
+                    </Link>
+                </div>
+
+            </Nav>
+            </>
         )
 }
 export default Navbar 

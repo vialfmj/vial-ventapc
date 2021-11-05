@@ -1,5 +1,6 @@
 import React from 'react'
 import { Row, Col, Button} from 'react-bootstrap'
+import {Link} from 'react-router-dom'
 import Logo from '../images/logo.png'
 function Item({prod}) {
     return (
@@ -9,7 +10,7 @@ function Item({prod}) {
                 </Row>
                 <Row>
                     <Col xs={6}>Producto: </Col>
-                    <Col xs={6}>{prod.producto} </Col>
+                    <Col xs={6}>{prod.categoria} </Col>
                 </Row>
                 <Row>
                     <Col xs={6}>Marca: </Col>
@@ -24,7 +25,9 @@ function Item({prod}) {
                     <Col xs={6}>{prod.precio} </Col>
                 </Row>
                 <Row>
-                    <Button variant='primary'>Comprar</Button>
+                    <Link to={`/ItemDetailContainer/${prod.id}`} >
+                    <Button variant='primary'>Mas informacion</Button>                    
+                    </Link>
                 </Row>
             </div>
     )
