@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import Logo from '../images/logo.png'
+import { useCartContext } from './context/CartContext'
 import ItemCount from './ItemCount'
 function ItemDetail({item}) {
     const [quantityToAdd, setQuantityToAdd]=useState()
     const [state, setState]=useState(false)
+    const {cartList, addToCart, isInCart}=useCartContext()
     useEffect(() => {
         return
     }, [quantityToAdd])
@@ -11,6 +13,17 @@ function ItemDetail({item}) {
         if(count > 0){
             setQuantityToAdd(count)
             setState(estado)
+            const prodToAdd={
+                "id": item.id,
+                "categoria": item.categoria,
+                "marca": item.marca,
+                "modelo": item.modelo,
+                "precio": item.precio,
+                "cantidad":count
+            }
+            if(isInCart(prodToAdd.id)===false){
+            addToCart(prodToAdd)
+            }
         }
         else
         alert('no hay nada que agregar')

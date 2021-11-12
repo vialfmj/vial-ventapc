@@ -8,9 +8,12 @@ import ItemDetailContainer from './components/ItemDetailContainer';
 import Cart from './components/Cart'
 import Galeria from './components/Galeria';
 import Nosotros from './components/Nosotros';
+import CartContextProvider from './components/context/CartContext';
 function App() {
   return (
     <>
+    <CartContextProvider>
+
       <Router>
       <NavBar/>
         <Routes>
@@ -23,6 +26,8 @@ function App() {
           <Route exact path='/ItemDetailContainer/:itemId' element={<ItemDetailContainer/>}/>
         </Routes>
       </Router>
+
+    </CartContextProvider>
 
     
     </ >

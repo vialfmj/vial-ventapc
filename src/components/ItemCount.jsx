@@ -20,6 +20,9 @@ function ItemCount(props) {
         return (
             <>
             <h2>Se agregaron {count} productos al carrito</h2>
+            <Link to='/'>
+                <Button>Volver para seguir comprando</Button>
+            </Link>
             <Link to='/Cart'>
             <Button variant='success'>Terminar comprar e ir a ver el carrito</Button>
             </Link>            
