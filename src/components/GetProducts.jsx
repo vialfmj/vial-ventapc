@@ -4,7 +4,7 @@ const productos= [
         "categoria":"motherboard",
         "marca": "ASUS",
         "modelo": "X570",
-        "precio": "$1000",
+        "precio": 1000,
         "imagenUrl": "",
         "descripcion":"insert descrption"
     },
@@ -13,7 +13,7 @@ const productos= [
         "categoria":"motherboard",
         "marca": "ASUS",
         "modelo": "B450",
-        "precio": "$1000",
+        "precio": 1000,
         "imagenUrl": "",
         "descripcion":"insert descrption"
 
@@ -23,7 +23,7 @@ const productos= [
         "categoria":"motherboard",
         "marca": "ASUS",
         "modelo": "A520",
-        "precio": "$1000",
+        "precio": 1000,
         "imagenUrl": "",
         "descripcion":"insert descrption"
     },
@@ -32,7 +32,7 @@ const productos= [
         "categoria":"motherboard",
         "marca": "Gigabtyte",
         "modelo": "X570",
-        "precio": "$1000",
+        "precio": 1000,
         "imagenUrl": "",
         "descripcion":"insert descrption"
 
@@ -42,7 +42,7 @@ const productos= [
         "categoria":"motherboard",
         "marca": "Gigabyte",
         "modelo": "B450",
-        "precio": "$1000",
+        "precio": 1000,
         "imagenUrl": "",
         "descripcion":"insert descrption"
 
@@ -52,7 +52,7 @@ const productos= [
         "categoria":"motherboard",
         "marca": "Gigabyte",
         "modelo": "A520",
-        "precio": "$1000",
+        "precio": 1000,
         "imagenUrl": "",
         "descripcion":"insert descrption"
 
@@ -62,7 +62,7 @@ const productos= [
         "categoria":"procesador",
         "marca": "AMD",
         "modelo": "Ryzen 3",
-        "precio": "$1000",
+        "precio": 1000,
         "imagenUrl": "",
         "descripcion":"insert descrption"
 
@@ -72,7 +72,7 @@ const productos= [
         "categoria":"prcesador",
         "marca": "AMD",
         "modelo": "Ryzen 5",
-        "precio": "$1000",
+        "precio": 1000,
         "imagenUrl": "",
         "descripcion":"insert descrption"
 
@@ -82,7 +82,7 @@ const productos= [
         "categoria":"procesador",
         "marca": "Intel",
         "modelo": "I3",
-        "precio": "$1000",
+        "precio": 1000,
         "imagenUrl": "",
         "descripcion":"insert descrption"
 
@@ -92,7 +92,7 @@ const productos= [
         "categoria":"procesador",
         "marca": "Intel",
         "modelo": "I5",
-        "precio": "$1000",
+        "precio": 1000,
         "imagenUrl": "",
         "descripcion":"insert descrption"
 

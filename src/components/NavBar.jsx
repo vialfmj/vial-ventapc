@@ -3,6 +3,7 @@ import Carrito from '../images/carrito.png'
 import {Nav, Button} from 'react-bootstrap' 
 import {Link} from 'react-router-dom';
 import App from '../App';
+import CartWidget from './CartWidget';
 
 const Navbar = () =>{
 
@@ -30,7 +31,7 @@ const Navbar = () =>{
                 </div>
                 <div className='contenedorCarrito'>
                     <Link to='/Cart'>
-                        <img src={Carrito} alt="imagen del acceso al carrito de compras" />
+                        <CartWidget />
                     </Link>
                 </div>
 
