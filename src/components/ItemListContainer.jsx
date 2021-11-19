@@ -4,21 +4,23 @@ import { getProducts } from './GetProducts'
 import { useParams } from 'react-router'
 import {Link} from 'react-router-dom'
 import {Button} from 'react-bootstrap'
+import { getFirestore } from './context/service/getFirestore'
+import { responsivePropType } from 'react-bootstrap/esm/createUtilityClasses'
+
 function ItemListContainer() {
     const [productos,setProductos]= useState([])
+    const [producto,setProducto]= useState({})
     const {categoriaId}=useParams()
     useEffect(() => {
-        if (categoriaId) {
-            getProducts
-            .then((res)=>{
-                setProductos(res.filter(prod=>prod.categoria===categoriaId))
-            })
-        }
+        const db= getFirestore()
+        if(categoriaId){
+
+        const dbQuery= db.collection('items').where('categoria', '==', categoriaId ).get()
+        dbQuery.then(res => setProductos(res.docs.map(prod=>({id: prod.id, ...prod.data() } )) ))        
+    }
         else{
-            getProducts
-            .then((res)=>{
-                setProductos(res)
-            })
+            const dbQuery= db.collection('items').get()
+            dbQuery.then(res => setProductos(res.docs.map(prod=>({id: prod.id, ...prod.data() } )) ))
         }
     }, [categoriaId])
     if(productos==null)

@@ -1,14 +1,16 @@
 import {useState, useEffect} from 'react' 
 import { useParams } from 'react-router'
+import { getFirestore } from './context/service/getFirestore'
 import { getProducts } from './GetProducts'
 import ItemDetail from './ItemDetail'
  function ItemDetailContainer() {
-    const [item,setItem]=useState()
+    const [item,setItem]=useState({})
     const {itemId}=useParams()
     useEffect(()=>{
-       getProducts
-         .then(res=>{
-            setItem(res.find(prod=>prod.id==itemId))})
+       
+       const db=getFirestore()
+       const dbQuery=db.collection('items').doc(itemId).get()
+       dbQuery.then(res => setItem({id: res.id, ...res.data() } ))
       },[itemId])
      return (
          <div>
