@@ -16,7 +16,7 @@ function ItemCount(props) {
         if(count > 0)
         setCount(count-1)
     }
-    if(state==true)
+    if(state===true)
         return (
             <>
             <h2>Se agregaron {count} productos al carrito</h2>

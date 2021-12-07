@@ -1,15 +1,13 @@
 import {useState, useEffect} from 'react'
 import ItemList from './ItemList'
-import { getProducts } from './GetProducts'
 import { useParams } from 'react-router'
 import {Link} from 'react-router-dom'
 import {Button} from 'react-bootstrap'
 import { getFirestore } from './context/service/getFirestore'
-import { responsivePropType } from 'react-bootstrap/esm/createUtilityClasses'
+import Loader from './Loader'
 
 function ItemListContainer() {
     const [productos,setProductos]= useState([])
-    const [producto,setProducto]= useState({})
     const {categoriaId}=useParams()
     useEffect(() => {
         const db= getFirestore()
@@ -23,8 +21,8 @@ function ItemListContainer() {
             dbQuery.then(res => setProductos(res.docs.map(prod=>({id: prod.id, ...prod.data() } )) ))
         }
     }, [categoriaId])
-    if(productos==null)
-        return <h1>Loading</h1>
+    if(productos.length===0)
+        return <Loader/>
     else
         return (
             <>

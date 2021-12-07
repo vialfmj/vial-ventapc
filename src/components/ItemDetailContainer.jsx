@@ -1,7 +1,6 @@
 import {useState, useEffect} from 'react' 
 import { useParams } from 'react-router'
 import { getFirestore } from './context/service/getFirestore'
-import { getProducts } from './GetProducts'
 import ItemDetail from './ItemDetail'
  function ItemDetailContainer() {
     const [item,setItem]=useState({})

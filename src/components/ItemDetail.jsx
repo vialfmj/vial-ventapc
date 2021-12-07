@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from 'react'
-import Logo from '../images/logo.png'
 import { useCartContext } from './context/CartContext'
 import ItemCount from './ItemCount'
 function ItemDetail({item}) {
     const [quantityToAdd, setQuantityToAdd]=useState()
     const [state, setState]=useState(false)
-    const {cartList, addToCart, isInCart}=useCartContext()
+    const { addToCart, isInCart}=useCartContext()
     useEffect(() => {
         return
     }, [quantityToAdd])
@@ -32,9 +31,9 @@ function ItemDetail({item}) {
     return <h1>Loading...</h1>
     else
     return(
-        <div >
+        <div className='contedorDetalle' >
             <br />
-            <div className='imagenDetalle'><img src={Logo} alt="imagen ilustrativa del producto" /></div>
+            <div className='imagenDetalle'><img src={item.imagenUrl} alt="imagen ilustrativa del producto" /></div>
             <div>{item.marca}</div>
             <div>{item.modelo}</div>
             <div>{item.descripcion}</div>

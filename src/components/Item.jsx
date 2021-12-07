@@ -1,12 +1,11 @@
 import React from 'react'
 import { Row, Col, Button} from 'react-bootstrap'
 import {Link} from 'react-router-dom'
-import Logo from '../images/logo.png'
 function Item({prod}) {
     return (
             <div className='cartaProducto'>  
                 <Row>
-                    <img className='imagenProducto' src={Logo} alt="Imagen del producto" />
+                    <img className='imagenProducto' src={prod.imagenUrl} alt="Imagen del producto" />
                 </Row>
                 <Row>
                     <Col xs={6}>Producto: </Col>

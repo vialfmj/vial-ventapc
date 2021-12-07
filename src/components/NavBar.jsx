@@ -1,5 +1,4 @@
 import Logo from '../images/logo.png';
-import Carrito from '../images/carrito.png'
 import {Nav, Button} from 'react-bootstrap' 
 import {Link} from 'react-router-dom';
 import App from '../App';

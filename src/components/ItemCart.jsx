@@ -1,4 +1,3 @@
-import React, { useContext } from 'react'
 import {Button} from 'react-bootstrap'
 import { useCartContext } from './context/CartContext'
 const ItemCart = ({prod}) => {

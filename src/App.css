@@ -25,13 +25,22 @@
   height: 50%;
 }
 .imagenProducto{
-  width: 100%;
-  height: 50px;
+  width: 15vw;
+  height: 15vh;
+}
+
+.imagenProducto img{
+  width:100%;
+  height: 100%;
 }
 .cartaProducto{
   display: block;
-  width: auto;
-  height: auto;
+  width: 17em;
+    height: 13em;
+    border: aquamarine solid;
+    margin-bottom: 2em;
+    
+    text-align: center;
 }
 .contenedorLista{
   width: 100%;
@@ -41,10 +50,29 @@
   justify-content: space-around;
 }
 .imagenDetalle{
-  width: 100%;
-  height: 128px;
+  left: 25em;
+    width: 15vw;
+    height: 20vh;
+    position: relative;
 }
 .imagenDetalle img{
   width: 100%;
   height: 100%;
+}
+.spinner{
+  width: 100%;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contedorDetalle{
+  text-align: center;
+}
+
+.botones{
+  display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
 }
