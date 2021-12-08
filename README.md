@@ -4,11 +4,9 @@ Esta aplicacion fue creada con react para el curso de React Js de Coder house
 En este podemos encontrar un home con los productos disponibles 
 
 Comenzando 🚀
-Podes verlo entrando en : link netlify
+https://github.com/vialfmj/vial-ventapc
 
-
-
-
+Podes verlo entrando en : link https://clever-franklin-decbf0.netlify.app
 
 Construido con 🛠️
  herramientas utilizadas:
@@ -20,5 +18,5 @@ React-router-dom 5.3.0 navegador
 
 Autor ✒️
 Franco Vial
-link guthub
-link linkein
+link https://github.com/vialfmj
+link https://www.linkedin.com/in/franco-mario-javier-vial-b91b77214/
